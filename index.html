@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Criando seu primeiro jogo com WebVR usando o A-frame</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css" rel="stylesheet" />
+    <link href="extras/highlight/styles/darkula.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="impress">
+      <div class="step" data-x="-1000" data-y="-1500">
+          <p class="title">Criando seu primeiro jogo com <strong>WebVR</strong> usando o <strong>A-frame</strong>!</p>
+          <hr />
+          <p class="footer">
+            <strong>Mozilla Brasil</strong> - Felipe Do E. Santo
+          </p>
+      </div>
+      <div class="step" data-x="-800" data-y="-300" data-scale="2">
+          <p class="title"><strong>WebVR</strong></p>
+          <p>
+            WebVR é uma plataforma de realidade virtual com todas as vantagens da web: aberta, conectada e instantânea.
+          </p>
+      </div>
+      <div class="step" data-x="-600" data-y="2000" data-scale="4">
+          <p class="title"><strong>A-frame</strong></p>
+          <p>
+            A-Frame é um framework opensource, lançado em dezembro de 2015 pela Mozilla para a criação de cenas 3D e de realidade virtual para a Web.
+          </p>
+      </div>
+      <div class="step" data-x="3800" data-y="1000" data-rotate-x="0" data-rotate-y="50" data-scale="2">
+          <img src="img/logoMozilla.svg" alt="Mozilla" />
+      </div>
+      <div class="step center" data-x="-6800" data-y="1000" data-rotate-x="0" data-rotate-y="-50" data-scale="2">
+          <img src="img/avatar.jpg" class="avatar" alt="Felipe Do E. Santo" />
+          <p class="title"><strong>Felipe Do E. Santo</strong></p>
+          <ul>
+            <li>Professor</li>
+            <li>Desenvolvedor Web desde 2006</li>
+            <li>Mozilla Rep e Tech Speaker!</li>
+          </ul>
+      </div>
+
+      <div class="step" data-x="-400" data-y="3900" data-scale="1">
+          <iframe src="exemplo1.html" width="800px" height="600px" class="iframe"></iframe>
+      </div>
+      <div class="step" data-x="-200" data-y="5400" data-scale="3">
+          <p>
+            Talk is cheap.<br />
+            <strong>Show me the code!</strong>
+          </p>
+      </div>
+      <div class="step" data-x="-200" data-y="7400" data-scale="3">
+        <p class="title">Instalando</p>
+        <pre>
+          <code>
+https://aframe.io/releases/0.8.0/aframe.min.js
+
+$ npm install aframe
+        </code>
+      </pre>
+      </div>
+      <div class="step" data-x="0" data-y="9300" data-scale="2">
+        <p class="title">Código do exemplo</p>
+        <pre>
+          <code class="html">
+&#x3C;a-scene&#x3E;
+  &#x3C;a-entity rotation="0 45 45" geometry="primitive: box"
+    position="0 2 -2" material="src: img/resources/firefox.jpg"&#x3E;&#x3C;/a-entity&#x3E;
+  &#x3C;a-sky color="#222"&#x3E;&#x3C;/a-sky&#x3E;
+&#x3C;/a-scene&#x3E;
+        </code>
+      </pre>
+      </div>
+
+      <div class="step" data-x="-3500" data-y="9300" data-scale="4" data-rotate-x="0" data-rotate-y="60">
+        <pre>
+<code class="html">&#x3C;html&#x3E;
+  &#x3C;head&#x3E;
+    &#x3C;script src=&#x22;js/aframe.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+  &#x3C;/head&#x3E;
+  &#x3C;body&#x3E;
+    &#x3C;a-scene&#x3E;
+      &#x3C;a-entity rotation=&#x22;0 45 45&#x22; geometry=&#x22;primitive: box&#x22;
+        position=&#x22;0 2 -2&#x22; material=&#x22;src: img/resources/firefox.jpg&#x22;&#x3E;
+      &#x3C;/a-entity&#x3E;
+      &#x3C;a-sky color=&#x22;#222&#x22;&#x3E;&#x3C;/a-sky&#x3E;
+    &#x3C;/a-scene&#x3E;
+  &#x3C;/body&#x3E;
+&#x3C;/html&#x3E;</code>
+      </pre>
+      </div>
+
+      <div class="step" data-x="3500" data-y="9300" data-scale="4" data-rotate-x="0" data-rotate-y="-60">
+          <p class="title">
+            Ok, legal.<br />
+            <strong>Mas e os jogos?</strong>
+          </p>
+      </div>
+
+      <div class="step" data-x="0" data-y="11300" data-scale="2">
+        <p class="title">JS13KGames</p>
+        <img src="img/js13kgames.png" alt="JS13KGames" />
+      </div>
+
+      <div class="step" data-x="0" data-y="12300" data-scale="2">
+        <iframe src="js13k/index.html" width="950px" height="600px" class="iframe"></iframe>
+      </div>
+
+      <div class="step" data-x="0" data-y="-6000" data-scale="2">
+        <p>Algumas possibilidades</p>
+        <iframe src="exemplo3.html" width="950px" height="600px" class="iframe"></iframe>
+      </div>
+
+      <div class="step" data-x="3000" data-y="-6000" data-scale="1" data-rotate-x="0" data-rotate-y="-60">
+        <pre>
+          <code class="html">&#x3C;a-box position=&#x22;0 0 -2&#x22; rotation=&#x22;0 45 45&#x22; scale=&#x22;2 2 2&#x22;&#x3E;
+  &#x3C;a-animation attribute=&#x22;scale&#x22; begin=&#x22;mouseenter&#x22;
+  dur=&#x22;300&#x22; to=&#x22;3 3 3&#x22;&#x3E;&#x3C;/a-animation&#x3E;
+  &#x3C;a-animation attribute=&#x22;scale&#x22; begin=&#x22;mouseleave&#x22;
+  dur=&#x22;300&#x22; to=&#x22;2 2 2&#x22;&#x3E;&#x3C;/a-animation&#x3E;
+&#x3C;/a-box&#x3E;</code>
+        </pre>
+      </div>
+
+      <div class="step" data-x="0" data-y="-3000" data-scale="2">
+        <p>Objetos</p>
+        <iframe src="exemplo4.html" width="950px" height="600px" class="iframe"></iframe>
+      </div>
+
+      <div class="step" data-x="3000" data-y="-3000" data-scale="1" data-rotate-x="0" data-rotate-y="-60">
+        <pre>
+          <code class="html">&#x3C;a-assets&#x3E;
+  &#x3C;a-asset-item id=&#x22;fox-obj&#x22; src=&#x22;obj/low-poly-fox-by-pixelmannen.obj&#x22;&#x3E;
+  &#x3C;/a-asset-item&#x3E;
+
+  &#x3C;a-asset-item id=&#x22;fox-mtl&#x22; src=&#x22;obj/low-poly-fox-by-pixelmannen.mtl&#x22;&#x3E;
+  &#x3C;/a-asset-item&#x3E;
+&#x3C;/a-assets&#x3E;
+
+&#x3C;a-entity obj-model=&#x22;obj: #fox-obj; mtl: #fox-mtl&#x22; scale=&#x22;0.1 0.1 0.1&#x22;
+position=&#x22;0 0 -14&#x22; rotation=&#x22;0 35 0&#x22;&#x3E;&#x3C;/a-entity&#x3E;</code>
+        </pre>
+      </div>
+
+      <div class="step" data-x="-3000" data-y="-3000" data-scale="2">
+        <p class="title"><strong>Thanks for playing!</strong></p>
+        <br />
+        <p>
+          Alguns links:<br />
+          https://aframe.io/<br />
+          https://github.com/felipez3r0<br />
+          http://js13kgames.com/entries/2017<br />
+        </p>
+      </div>
+
+      <div class="step" data-x="-5500" data-y="-3000" data-scale="2">
+        <p class="title"><strong>Perguntas?</strong></p>
+        <br />
+        <p>
+          Meus contatos:<br />
+          Twitter: @felipez3r0<br />
+          Github: @felipez3r0<br />
+          E-mail: felipe@2ilabs.com.br
+        </p>
+      </div>
+
+      <div id="overview" class="step" data-x="0" data-y="2500" data-z="0" data-scale="30">
+      </div>
+
+    </div>
+
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+    <script src="extras/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
